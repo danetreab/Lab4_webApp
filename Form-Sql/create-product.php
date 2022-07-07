@@ -1,4 +1,5 @@
 <?php
+session_start();
      require '../vendor/autoload.php';
     //      //connect
     //     $mysqli = new mysqli("127.0.0.1:3306","root","","usercredentials");
@@ -31,7 +32,7 @@
      }
 
 
-         $values = array('name' => $_POST['name'], 'user_id' => '1', 'amount' => $_POST['amount'], 'price' => $_POST['price']);
+         $values = array('name' => $_POST['name'], 'user_id' => $_SESSION['id'], 'amount' => $_POST['amount'], 'price' => $_POST['price']);
 
         $query = $fluent->insertInto('products')->values($values)->execute();
     ?>
