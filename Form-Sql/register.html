@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <style>
+      form{
+        margin: 25px 30%;
+      }
+    </style>
+</head>
+<body>
+    <form action="register.php" method="POST" enctype="multipart/form-data">
+        <h3 class="mb-3">Register form</h3>
+        <div class="form-outline mt-4">
+            <input type="name" name="username" required class="form-control" />
+            <label class="form-label">Username</label>
+        </div>
+        <div class="form-outline mt-3">
+            <input type="email" name="email" required class="form-control" />
+            <label class="form-label">Email address</label>
+        </div>
+        <div class="form-outline mt-3">
+            <input type="name" name="class" required class="form-control" />
+            <label class="form-label">Class</label>
+        </div>
+        <div class="form-outline mt-3">
+            <input type="password" name="password" required class="form-control" />
+            <label class="form-label">Password</label>
+        </div>
+        <div class="form-outline mt-3">
+            <select name='gender' required class="form-select">
+                <option selected value="">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-outline mt-3">
+           <input type="file" required name="profile">
+           <label class="form-label">( Upload Profile )</label>
+        </div>
+        
+        <button type="submit" class="mt-4 btn btn-primary w-100">Submit</button>
+        <div class="text-center mt-3">
+            <p>Already Have Account? <a href="index.html">Login</a></p>
+        </div>
+    </form>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript"></script>
+</body>
+</html>
