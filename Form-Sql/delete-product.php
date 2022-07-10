@@ -6,6 +6,7 @@ if(isset($_GET['deleteid'])){
     $id = $_GET['deleteid'];
     $query = $fluent->deleteFrom('products', $id)->execute();
 }
+echo "<script> location.href = 'table.php';</script>";
 
 
 ?>

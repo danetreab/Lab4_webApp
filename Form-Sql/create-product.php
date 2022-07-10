@@ -35,4 +35,6 @@ session_start();
          $values = array('name' => $_POST['name'], 'user_id' => $_SESSION['id'], 'amount' => $_POST['amount'], 'price' => $_POST['price']);
 
         $query = $fluent->insertInto('products')->values($values)->execute();
+        echo "<script> location.href = 'table.php';</script>";
+    
     ?>

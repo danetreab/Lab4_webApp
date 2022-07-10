@@ -8,7 +8,7 @@
     $loginuser = checkuser($email_input,$password_input,$user);
     if($loginuser == 1){
         $_SESSION['email']=$email_input;
-        echo "<script> location.href = 'profile.php';</script>";
+        echo "<script> location.href = 'table.php';</script>";
     }else{
         echo "<script> alert('Incorrect Email or Password');</script> ";
         echo "<script> location.href = 'index.html';</script>";
