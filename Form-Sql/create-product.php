@@ -9,7 +9,6 @@ session_start();
     //     $result = $mysqli->query("select name,price,amount from products");
     //     $add = mysqli_fetch_all($result,MYSQLI_ASSOC);
     //     $conn = mysqli_connect($name, $price, $amount);
-
     //    if(!$conn){
     //     die("connection fail...". mysqli_connect_error());
     //    }
@@ -21,6 +20,7 @@ session_start();
     //   }
       
     //   mysqli_close($conn);
+
     $pdo = new PDO('mysql:dbname=usercredentials', 'root', '');
     $fluent = new \Envms\FluentPDO\Query($pdo);
 
@@ -32,9 +32,9 @@ session_start();
      }
 
 
-         $values = array('name' => $_POST['name'], 'user_id' => $_SESSION['id'], 'amount' => $_POST['amount'], 'price' => $_POST['price']);
+        $values = array('name' => $_POST['name'], 'user_id' => $_SESSION['id'], 'amount' => $_POST['amount'], 'price' => $_POST['price']);
 
         $query = $fluent->insertInto('products')->values($values)->execute();
         echo "<script> location.href = 'table.php';</script>";
-    
+
     ?>
